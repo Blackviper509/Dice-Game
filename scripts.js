@@ -1,71 +1,28 @@
-var dice = 
-{
-    sides: 6,
-    roll: function () 
-    {
-      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-      return randomNumber;
-    }
+window.addEventListener( 'DOMContentLoaded', function () {
+	
+    const buttonRoolDice = document.querySelector( '.dice-roll' );
+
+function rollDice () {
+
+    const diceSide1 = document.getElementById( 'dice-side-1' );
+    const diceSide2 = document.getElementById( 'dice-side-2' );
+    const diceSide3 = document.getElementById( 'dice-side-3' );
+    const status = document.getElementById( 'status' );
+
+    const side1 = Math.floor( Math.random() * 6 ) + 1;
+    const side2 = Math.floor( Math.random() * 6 ) + 1;
+    const side3 = Math.floor( Math.random() * 6 ) + 1;
+    const diceTotal = side1 + side2 + side3;
+
+    diceSide1.innerHTML = side1;
+    diceSide2.innerHTML = side2;
+    diceSide3.innerHTML = side3;
+
+    status.innerHTML = 'You rolled ' + diceTotal + '.';
+
 }
 
-  var dice2 = 
-{
-    sides: 6,
-    roll: function () 
-    {
-      var randomNumber2 = Math.floor(Math.random() * this.sides) + 1;
-      return randomNumber2;
-    }
-}
+buttonRoolDice.addEventListener( 'click', rollDice, false );
 
-  var dice3 = 
-{
-    sides: 6,
-    roll: function () 
-    {
-      var randomNumber3 = Math.floor(Math.random() * this.sides) + 1;
-      return randomNumber3;
-    }
-}
-  
-  
-  function printNumber(number) 
-  {
-    var placeholder = document.getElementById('placeholder');
-    placeholder.innerHTML = number;
-  }
+}, false);
 
-  function printNumber2(number2) 
-  {
-    var placeholder2 = document.getElementById('placeholder2');
-    placeholder2.innerHTML = number2;
-  }
-  function printNumber3(number3)
-   {
-    var placeholder3 = document.getElementById('placeholder3');
-    placeholder3.innerHTML = number3;
-  }
-  
-  var button = document.getElementById('button');
-  var button = document.getElementById('button');
-  var button = document.getElementById('button');
-  
-  button.onclick = function() 
-  {
-    var result = dice.roll();
-    printNumber(result);
-  };
-
-  button.onclick = function() 
-  {
-    var result2 = dice2.roll();
-    printNumber(result2);
-  };
-
-  button.onclick = function() 
-  {
-    var result3 = dice3.roll();
-    printNumber(result3);
-  };
-  
-  

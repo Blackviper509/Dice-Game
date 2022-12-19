@@ -1,16 +1,20 @@
 <html>
 <head>
-    <title>Dice Game</title>
+    <title>Dice Simulator 2015</title>
     <link rel="stylesheet" href="style.css">
 </head>  
 <body>
-  <p1 id="placeholder" > </p1>
-  <p2 id="placeholder2" > </p2>
-  <p3 id="placeholder3"> </p3>
-
-
-  <button id="button">Roll Dice</button>
-  <script src="scripts.js"></script>
-  <script src="ui.js"></script>
+ <div class="wrapper">
+		<div class="column">
+				<div id="dice-side-1" class="dice">0</div>
+				<div id="dice-side-2" class="dice">0</div>
+                <div id="dice-side-3" class="dice">0</div>
+		</div>
+		<div class="column">
+				<button type="button" class="dice-roll">roll dice</button>
+				<h2 id="status"></h2>
+		</div>
+</div>
+<script src="scripts.js"></script>
 </body>
 </html>

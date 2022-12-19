@@ -1,46 +1,43 @@
+body {
+    position: relative;
+}
 
-* {
-    font-family: Helvetica, Arial, sans-serif;
-    text-align: center;
-  }
-  button {
-    background-color: rgb(82, 186, 179);
-    border-radius: 6px;
-    border: none;
-    color: rgb(255, 255, 255);
+.wrapper {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+}
+
+#status {
+    position: absolute;
+    top: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+    min-width: 400px;
+    margin: 0;
+		text-align: center;
+}
+
+.dice {
+    width: 32px;
+    float: left;
+    background-color: lightcoral;
+    border: 1px solid black;
     padding: 10px;
-    text-transform: uppercase;
-    width: 200px;
-    cursor: pointer;
-  }
-  #placeholder {
-    height: 100px;
-    width: 100px;
-    padding: 50px;
-    margin: 50px auto;
-    border: 1px solid gray;
-    border-radius: 10px;  
-    font-size:80px;
-    background-position: left;
-  }
-  #placeholder2 {
-    height: 100px;
-    width: 100px;
-    padding: 50px;
-    margin: 50px auto;
-    border: 1px solid gray;
-    border-radius: 10px;  
-    font-size:80px;
-    text-align: left;
-  }
-  #placeholder3 {
-    height: 100px;
-    width: 100px;
-    padding: 50px;
-    margin: 50px auto;
-    border: 1px solid gray;
-    border-radius: 10px;  
-    font-size:80px;
-    text-align: right;
-  }
+    font-size: 24px;
+    text-align: center;
+    margin: 5px;
+    border-radius: 5px;
+}
 
+.dice-roll {
+    cursor: pointer;
+    text-transform: capitalize;
+}
