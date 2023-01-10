@@ -118,9 +118,16 @@ function math() {
       cell3.innerHTML = numDoubles;
     } else if(numDice == 3) {
       cell3 = firstRow.insertCell(3);
-      cell3.innerHTML = numDoubles;
+      if(!cell3.innerHTML == numDoubles)
+      {
+        numDoubles = "No Doubles";
+      }
       cell4 = firstRow.insertCell(4);
       cell4.innerHTML = numTriples;
+      if(!cell4.innerHTML == numTriples)
+      {
+        numDoubles = "No Triples";
+      }
     }
 
     function setValues() {
@@ -179,17 +186,6 @@ body {
 table {
 	width: 50%;
 	text-align: center;
-}
-
-td {
-	border: black;
-	padding: 10px;
-}
-
-th 
-{
-	border: dotted  rgb(186, 50, 50);
-	padding: 10px;
 }
 
 
